@@ -12,8 +12,8 @@ public:
             //for last occurence we'll use upper_bound as it returns the last occurence's next index (if exists)
             int ind2=upper_bound(nums.begin(),nums.end(),target)-nums.begin();
             if(nums[ind2-1]==target)ans.push_back(ind2-1);
+            return ans;
         }
-        else return {-1,-1};
-        return ans;
+        return {-1,-1};
     }
 };
