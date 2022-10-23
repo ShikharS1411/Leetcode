@@ -20,5 +20,9 @@ public:
         if(range1[1]>=range2[0]&&range1[0]<=range2[0])return true;
         if(range1[0]>=range2[0]&&range1[0]<=range2[1])return true;
         return false;
+        /*direct comparision
+                        return (event1[0] <= event2[0] && event2[0] <= event1[1]) || 
+               (event2[0] <= event1[0] && event1[0] <= event2[1]);
+               */
     }
 };
