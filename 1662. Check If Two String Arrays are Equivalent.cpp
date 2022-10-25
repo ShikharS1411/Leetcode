@@ -4,7 +4,7 @@ public:
         string s1="",s2="";
         for(auto x:word1)s1+=x;
         for(auto x:word2)s2+=x;
-        if(s1==s2)return true;
+        if(s1==s2)return true;//dont compare size
         return false;
     }
 };
