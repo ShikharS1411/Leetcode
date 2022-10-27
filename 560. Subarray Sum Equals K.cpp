@@ -30,6 +30,7 @@ public:
         return count;
         */
         //memorise this approach lol
+        //https://youtu.be/bWym1dWZhh0
         int n=nums.size();
         int count=0;
         unordered_map<int, int> prefsum;
