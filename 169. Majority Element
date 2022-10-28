@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        /*
+        //hashing
+        unordered_map<int,int>umap;
+        int maxi=-1e9;
+        int key=-1;
+        for(auto x:nums)umap[x]++;
+        //return the most freq element
+        for(auto x:umap){
+            if(x.second>maxi){
+                maxi=x.second;
+                if(x.second>nums.size()/2)key=x.first;
+            }
+        }
+        return key;
+        */
+        //optimal approach->Moore voting 
+        int count=0;
+        int candidate=0;
+        for(auto x:nums){
+            if(count==0)candidate=x;
+            if(x==candidate)count++;
+            else count--;
+        }
+        return candidate;
+    }
+};
