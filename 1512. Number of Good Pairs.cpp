@@ -10,12 +10,23 @@ public:
         return count;
         */
         //after this do prob->2364
+        /*
         //optimised approach->hashing
         int count=0;
         unordered_map<int,int>umap;
         for(auto x:nums){
             count+=umap[x];
             umap[x]++;
+        }
+        return count;
+        */
+        //mathematical appraoch
+        //whenever pairs try to d with map
+        map<int,int>m;
+        int count=0;
+        for(auto x:nums)m[x]++;
+        for(auto x:m){
+            count+=(x.second*(x.second-1)/2);
         }
         return count;
     }
