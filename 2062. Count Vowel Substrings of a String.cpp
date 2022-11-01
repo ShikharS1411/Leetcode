@@ -6,7 +6,7 @@ public:
         return false;
     }
     int countVowelSubstrings(string word) {
-        //can apply brute force as constraints are less ranged->o(n2)
+        //can apply brute force with map as constraints are less ranged->o(n2) 
         int count=0;
         for(int i=0;i<word.size();i++){
             unordered_map<char,int>umap;//need to create an umap every time aftr one complete iteration
