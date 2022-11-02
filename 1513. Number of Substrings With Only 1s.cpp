@@ -14,7 +14,7 @@ public:
         }
         return count;
         */
-        //optimal approach
+        //optimal approach similar to kadane's algo
         int ans=0;
         const int mod=1e9+7;
         //just like set bits,//count freq of 1's
