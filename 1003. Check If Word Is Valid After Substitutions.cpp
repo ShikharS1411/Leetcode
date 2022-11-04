@@ -14,7 +14,7 @@ public:
                 if(st.empty()||st.top()!='b')return false;
                 //abc would form in stack now if we push
                 st.pop();//only a remains
-                if(st.empty()||st.top()!='a')return false;
+                if(st.empty())return false;
                 st.pop();//abc will get removed
             }
             else false;
