@@ -23,9 +23,9 @@ public:
             //"while" loop dont make any sense as only one element would be inserted at a time so will be removed once if condition satisfies
             if(!st.empty() && st.top()==s[i]){
                 st.pop();
-                continue;//skips the loop for that s[i];
+//                 continue;skips the loop for that s[i];
             } 
-            st.push(s[i]);
+            else st.push(s[i]);
         }
         //traverse the stack and push elements into the array
         while(!st.empty()){
