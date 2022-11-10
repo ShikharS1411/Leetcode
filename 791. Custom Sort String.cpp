@@ -50,5 +50,26 @@ public:
             } 
         }
         return s1+s2;
+
+
+        //best  approach
+        //firstly store all s(string) elements in a string through map acc to freq
+        map<char,int>mp;// have to create a ordered map
+        for(auto x:s)mp[x]++;
+        string temp="";
+        for(auto x:order){
+            if(mp[x]){
+                //acc to freq
+                while(mp[x]--)temp+=x;
+            }
+        }
+        //now add the remaing elements as well acc to their freq
+        //bche hue element map mei woi honge jinki freq exist kr rhi abhi bhi
+        for(auto x:mp){
+            if(x.second>0){
+                while(x.second--)temp+=x.first;
+            }
+        }
+        return temp;
     }
 };
