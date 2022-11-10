@@ -12,10 +12,16 @@ public:
         //edge case
         if(s.size()!=t.size())return false;
         for(auto x:s)umap[x]++;
+        /*
         for(int i=0;i<t.size();i++){
             //when element not found or its freq became zero
             if(umap.find(t[i])==umap.end()or umap[t[i]]==0) return false;
             else umap[t[i]]--;
+        }
+        */
+        for(auto x:t){
+            umap[x]--;
+            if(umap[x]<0)return false;
         }
         return true;
     }
