@@ -20,6 +20,7 @@ public:
         }
         return ans;
         */
+        /*
         //2nd appraoch->using stringstream
         //stringstream is use to count the number of words in a string
         stringstream ss(s);
@@ -32,5 +33,11 @@ public:
             st.pop();
         }
         return ans.substr(0,ans.size()-1);//to avoid the last " "
+        */
+        //more optimised of 2nd one
+        stringstream all(s); 
+        string word,ans = "";
+        while (all >> word)ans = word + " " + ans;//will be reversed as adding ans aftr adding word to it
+        return ans.substr(0,ans.length()-1);//to avoid that " " in the end
     }
 };
