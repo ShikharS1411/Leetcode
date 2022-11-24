@@ -28,6 +28,7 @@ public:
         return maxi;
         */
         //2nd optimal approach->using sliding window/two pointer(as size related q) and hashmaps
+        /*
         map<char,int>mp;
         int i=0,j=0,n=s.size(),ans=0;//better do 0 as empty string can also be there
         while(j<n){
@@ -45,5 +46,21 @@ public:
             j++;
         }
         return ans;
+        */
+        //better code
+        int i=0,n=s.size(),maxi=0;
+        map<char,int>mp;
+        for(int j=0;j<n;j++){
+            mp[s[j]]++;
+            while(!isvalid(mp)){
+                //remove the freq of s[i] and then move the pointer ahead
+                mp[s[i]]--;
+                //check if 0
+                if(mp[s[i]]==0)mp.erase(s[i]);
+                i++;
+            }
+            maxi=max(maxi,j-i+1);
+        }
+        return maxi;
     }
 };
