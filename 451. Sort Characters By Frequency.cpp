@@ -2,7 +2,7 @@ class Solution {
 public:
     string frequencySort(string s) {
         /*
-        1st approach-.using heaps
+        //1st approach-.using heaps
         //can do in o(n) and o(nlogn)
         unordered_map<char,int>umap;
         for(auto x:s)umap[x]++;
