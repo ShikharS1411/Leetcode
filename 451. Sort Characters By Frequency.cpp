@@ -1,6 +1,8 @@
 class Solution {
 public:
     string frequencySort(string s) {
+        /*
+        1st approach-.using heaps
         //can do in o(n) and o(nlogn)
         unordered_map<char,int>umap;
         for(auto x:s)umap[x]++;
@@ -18,17 +20,25 @@ public:
                 temp+=element;
             }
             maxh.pop();
+            
+            //can do it by like this as well
+            // pair<int,char> a;
+            // a = qq.top();
+            // qq.pop();
+            // while(a.first--)
+            // {
+            //     ans+=a.second;
+            // }
+            // maxh.pop();
         }
         return temp;
-
-
-        //2nd approach->by using lamda function
-        unordered_map<int, int>umap;
-        for (auto x: nums)umap[x]++;
-        //lamda func
-        sort(nums.begin(),nums.end(),[&](int a, int b) {
-            return umap[a]==umap[b]?a>b:umap[a]<umap[b];
+        */
+        //2nd appraoch->using lambda function
+        unordered_map<char,int>umap;
+        for(auto x:s)umap[x]++;
+        sort(s.begin(),s.end(),[&](char a,char b){
+           return umap[a]==umap[b]?a<b:umap[a]>umap[b];
         });
-        return nums;
+        return s;
     }
 };
