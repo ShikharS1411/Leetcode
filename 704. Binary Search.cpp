@@ -12,5 +12,11 @@ public:
         //additional case
         if(nums[i]==target)return i;
         return -1;//when not found
+
+        //2nd approach->using stl
+        int index=lower_bound(nums.begin(),nums.end(),target)-nums.begin();//itwill give the index(1st) of the target element,but if it doesnt exists it will give the index of next greater element (need to apply base case for it)
+        if(index>=nums.size())return -1;
+        if(nums[index]==target)return index;
+        return -1;
     }
 };
