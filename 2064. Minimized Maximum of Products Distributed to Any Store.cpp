@@ -6,7 +6,8 @@ public:
         // mid->the minimised max prod aftr distributation
         ll tot_store=0;
         for(int i=0;i<a.size();i++){
-            tot_store+=(a[i]+mid-1)/mid;
+            tot_store+=ceil(((double)a[i])/(double)mid);
+            //mid amount se kitne store ko wo quantaty distribute kr skte h
         }
         if(tot_store>n)return false;
         return true;
