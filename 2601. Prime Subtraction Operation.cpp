@@ -5,10 +5,9 @@ public:
 bool primeSubOperation(vector<int>& a) {
         int n=a.size();
         vector<int>is_prime(1000,true),p;
-        int ans=0;
         for( ll i=2;i<1000;i++){
             if(is_prime[i]==true){
-                for(ll j=i*i;j<1000;j+=i){
+                for(ll j=2*i;j<1000;j+=i){
                     is_prime[j]=false;
                 }
             }
