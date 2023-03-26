@@ -12,4 +12,4 @@
             }
         }
     }
-// further use this (prime number vector) acc to question demand
+// further use this (prime number vector) acc to question demands

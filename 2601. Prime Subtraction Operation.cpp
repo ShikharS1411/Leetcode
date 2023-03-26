@@ -27,7 +27,7 @@ bool primeSubOperation(vector<int>& a) {
         if(ind!=0)a[i]-=p[ind-1];
         if(a[i]<=a[i-1])return false;
     }
-    //dont use this as cant determine if strictly inc or not
+    //don't use this as cant determine if strictly inc or not
     // if(is_sorted(a.begin(),a.end()))return true;
     // return false;
     return true;
