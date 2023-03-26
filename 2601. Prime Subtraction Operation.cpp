@@ -5,13 +5,13 @@ public:
 bool primeSubOperation(vector<int>& a) {
     int n=a.size();
     //sieve of eranthosis
-    vector<int>is_prime(1000,true),p;
+    vector<int>is_prime(1005,true),p;
     is_prime[0]=false;
     is_prime[1]=false;
     //0,1 are not prime
-    for( ll i=2;i<1000;i++){
+    for( ll i=2;i<1005;i++){
         if(is_prime[i]==true){
-            for(ll j=2*i;j<1000;j+=i){
+            for(ll j=2*i;j<1005;j+=i){
                 is_prime[j]=false;
             }
         }
