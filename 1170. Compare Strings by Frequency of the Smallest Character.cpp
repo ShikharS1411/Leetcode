@@ -11,7 +11,7 @@ public:
         for(auto x:w){
             char ch=*min_element(x.begin(),x.end());
             int cnt=count(x.begin(),x.end(),ch);
-            mp[i++]=cnt;//uniquely iodentify it ez hehe
+            mp[i++]=cnt;//uniquely identify it ez hehe
         }
         for(auto x:mp)cout<<x.fi<<" "<<x.se<<"  ";
         cout<<endl;
