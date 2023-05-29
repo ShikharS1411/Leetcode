@@ -30,6 +30,51 @@ public:
         ans=temp+mid+ans;
         return ans;
         */
+                /*
+        nhi ho rha :sad:
+        map<char,int>mp;
+        int cnt=count(s.begin(),s.end(),'0');
+        if(cnt==s.size())return "0";
+        for(auto x:s)mp[x]++;
+        // if(mp.size()==1 && s[0]=='0')return 0;
+        vector<pair<int,char>>e,o;
+        for(auto x:mp){
+            // x.se->freq,x.fi->char
+            if(x.se&1)o.pb({x.se,x.fi});
+            else e.pb({x.se,x.fi});
+            cout<<x.fi<<" "<<x.se<<endl;
+        }
+        sort(o.rbegin(),o.rend());
+        sort(e.rbegin(),e.rend());
+        string t="";
+        for(auto x:e){
+            int y=x.fi/2;//freq of even char
+            while(y--)t+=x.se;
+        }
+        sort(t.rbegin(),t.rend());
+        string tt=t;
+        reverse(t.begin(),t.end());
+        // string mid="";
+        char ch=o[0].se;
+        int y=o[0].fi/2;
+        string mid="";
+        while(y--)mid+=ch;
+        //check for greater 1 freq char
+        int maxi=ch-'0';
+        for(auto x:o){
+            if(x.fi==1)maxi=max(maxi,(x.se-'0'));
+        }
+        string mid2=mid;
+        mid+=(maxi+'0');
+        mid+=mid2;
+        tt+=mid;
+        tt+=t;
+        cout<<tt<<endl;
+        //to avoid leading zeroes
+        int i=0,j=tt.size()-1;
+        while(tt[i]=='0' && tt[j]=='0')i++,j--;
+        return tt.substr(i,j-i+1);
+        */
       string start="",mid="",end="";
       unordered_map<char, int> umap;
       for (auto x :s) {
