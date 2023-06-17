@@ -1,3 +1,4 @@
+
 //tle/brute force approach
 class Solution {
 public:
@@ -10,8 +11,7 @@ public:
     
     string longestPalindrome(string s) {
         
-        // Memory limit exceed :P
-        //can apply brute force as per constraints
+        // TLE
         vector<pair<int,string>>v;
         for(int i=0;i<s.size();i++){
             for(int j=i;j<s.size();j++){
