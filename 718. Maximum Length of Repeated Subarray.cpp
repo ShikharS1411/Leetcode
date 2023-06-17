@@ -24,3 +24,43 @@ public:
         return maxi;
     }
 };
+
+
+
+//tle approach
+#define pb push_back
+class Solution {
+public:
+    int findLength(vector<int>& a, vector<int>& b) {
+        //can do brute force tho
+        map<vector<int>,int>mp;
+        for(int i=0;i<a.size();i++){
+            for(int j=i;j<a.size();j++){
+                // temp.pb(a[j]);
+                vector<int>temp;
+                for(int k=i;k<=j;k++){
+                    // cout<<a[k]<<" ";
+                    temp.pb(a[k]);
+                }
+                // cout<<endl;
+                mp[temp]++;
+            }
+        }
+        int maxi=0;
+        // cout<<endl;
+        for(int i=0;i<b.size();i++){
+            for(int j=i;j<b.size();j++){
+                // temp.pb(b[j]);
+                 vector<int>temp;
+                 for(int k=i;k<=j;k++){
+                     // cout<<b[k]<<" ";
+                     temp.pb(b[k]);
+                 }
+                // cout<<endl;
+                 int sz=temp.size();
+                 if(mp.find(temp)!=mp.end())maxi=max(maxi,sz);
+            }
+        }
+        return maxi;
+    }
+};
