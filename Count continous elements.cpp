@@ -14,3 +14,20 @@ for(int i=0;i<n;i++){
 }
 //edge case
 //if all are 0/last element having 0s(conti) u can add a garbage element at the end and make it till <=n so that it would also be coverd :D
+
+
+//another method to find conti element counts
+    vector<int>a;
+    int prev=-1;
+    int count=0;
+    //where s can be any string or array's elem
+    //transform acc to req :D 
+    for(int i=0;i<n;i++){
+        if(prev==-1 || prev==s[i])count++;
+        else if(prev!=s[i]){
+            a.pb(count);
+            count=1;
+        }
+        //update prev
+        prev=s[i];
+    }
