@@ -19,6 +19,7 @@ for(int i=0;i<n;i++){
 
 
 // 2
+//for lenght
 //another method to find conti element counts
     vector<int>a;
     int prev=s[0];//for string make it char prev=s[0];
