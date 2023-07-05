@@ -18,12 +18,12 @@ for(int i=0;i<n;i++){
 
 //another method to find conti element counts
     vector<int>a;
-    int prev=-1;//for string make it char prev=s[0];
+    int prev=s[0];//for string make it char prev=s[0];
     int count=0;
     //where s can be any string or array's elem
     //transform acc to req :D 
-    for(int i=0;i<n;i++){
-        if(prev==-1 || prev==s[i])count++;
+    for(int i=1;i<n;i++){
+        if(prev==s[i])count++;
         else if(prev!=s[i]){
             a.pb(count);
             count=1;
