@@ -1,3 +1,4 @@
+// 1
 // here's the the best way to count number of times the elements(for eg 0) which occurs in a consecutive manner
 vector<int>zeros;
 int count=0;
@@ -16,6 +17,8 @@ for(int i=0;i<n;i++){
 //if all are 0/last element having 0s(conti) u can add a garbage element at the end and make it till <=n so that it would also be coverd :D
 
 
+
+// 2
 //another method to find conti element counts
     vector<int>a;
     int prev=s[0];//for string make it char prev=s[0];
@@ -32,3 +35,11 @@ for(int i=0;i<n;i++){
         prev=s[i];
     }
     a.pb(count);//tki last wli conti na choote huehue
+
+
+// 3
+    //compressing 
+    int count=1
+        for(int i=1;i<n;i++){
+        if(s[i]!=s[i-1])count++;
+    }
