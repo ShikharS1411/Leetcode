@@ -13,6 +13,7 @@ for(int i=0;i<n;i++){
         count=0;
     }
 }
+if(count)zeros.pb(count);
 //edge case
 //if all are 0/last element having 0s(conti) u can add a garbage element at the end and make it till <=n so that it would also be coverd :D
 
