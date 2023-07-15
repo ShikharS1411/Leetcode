@@ -23,11 +23,9 @@ if(count)zeros.pb(count);
 //for lenght
 //another method to find conti element counts
     vector<int>a;
-    int prev=s[0];//for string make it char prev=s[0];
-    int count=1;
-    //where s can be any string or array's elem
-    //transform acc to req :D 
-    for(int i=1;i<n;i++){
+    char prev=s[0];
+    int count=0;
+    for(int i=0;i<n;i++){
         if(prev==s[i])count++;
         else if(prev!=s[i]){
             a.pb(count);
@@ -36,7 +34,7 @@ if(count)zeros.pb(count);
         //update prev
         prev=s[i];
     }
-    a.pb(count);//tki last wli conti na choote huehue
+    if(count)a.pb(count);//for the last one
 
 
 // 3
