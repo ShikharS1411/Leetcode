@@ -12,28 +12,20 @@
 class Solution {
 public:
     vector<int> rightSideView(TreeNode* root) {
-        //jo bhi sbse phele dike wo print krna h jis bhi view point se
-        //will only be considering the right nodes
-        //using bfs
-        //edge case
-        if(!root) return {};
+        if(!root)return {};
+        vector<int>ans;
         queue<TreeNode*>q;
         q.push(root);
-        vector<int>ans;
-        int data=0;
-        while(!q.empty()){
-            int size=q.size();
-            for(int i=0;i<size;i++){
-                TreeNode*node=q.front();
+        while(q.size()){
+            auto node=q.front();
+            int n=q.size();
+            for(int i=0;i<n;i++){
+                auto node=q.front();
                 q.pop();
-                //keep updating data
-                data=node->val;
-                //for just right values as that would be at the end
+                if(i==n-1)ans.push_back(node->val);
                 if(node->left)q.push(node->left);
                 if(node->right)q.push(node->right);
-                //for left view just change the order
             }
-            ans.push_back(data);//would be the last updated data
         }
         return ans;
     }
